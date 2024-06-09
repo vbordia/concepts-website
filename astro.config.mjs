@@ -3,7 +3,7 @@ import remarkMath from 'remark-math';
 import mdx from "@astrojs/mdx";
 import rehypeMathjax from 'rehype-mathjax';
 
-import cloudflare from "@astrojs/cloudflare";
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +12,5 @@ export default defineConfig({
     rehypePlugins: [rehypeMathjax]
   },
   integrations: [mdx({})],
-  output: "hybrid",
-  adapter: cloudflare()
+
 });
