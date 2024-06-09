@@ -1,7 +1,6 @@
 ---
-layout: '../../layouts/Layout.astro'
+title: Join PMF of Two Discrete Variables
 ---
-
 # Joint Probability Mass Function (PMF) of Two Discrete Random Variables
 
 In probability theory and statistics, the joint probability mass function (joint PMF) describes the probability of observing particular values for two or more discrete random variables simultaneously. It gives the probability of each combination of values that the random variables can take on.
