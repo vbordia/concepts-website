@@ -12,6 +12,6 @@ export default defineConfig({
     rehypePlugins: [rehypeMathjax]
   },
   integrations: [mdx({})],
-  prefetch: true
+
 
 });
