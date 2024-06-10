@@ -1,18 +1,47 @@
 ---
-import { getEntry, getEntries,getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
 const allBlogPosts = await getCollection('stats2');
+
+// Sort the blog posts by the `week` field
+allBlogPosts.sort((a, b) => a.data.week - b.data.week);
+
+// Group by week
+const postsByWeek = allBlogPosts.reduce((acc, post) => {
+  const week = post.data.week;
+  if (!acc[week]) {
+    acc[week] = [];
+  }
+  acc[week].push(post);
+  return acc;
+}, {});
 ---
+
 <Layout title='Stats2'>
 <main>
-    <ul>
-        {allBlogPosts.map(blogPostEntry => (
-          <li>
-            <a href={`/stats2/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
-            
-          </li>
-        ))}
-      </ul>
+    {Object.keys(postsByWeek).map(week => (
+        <section key={week}>
+            <h2 id={week}>Week {week}</h2>
+            <ul>
+                {postsByWeek[week].map(blogPostEntry => (
+                    <li key={blogPostEntry.slug}>
+                        <a href={`/stats2/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    ))}
 </main>
 </Layout>
+
+<style>
+  main{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  li{
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+  }
+</style>

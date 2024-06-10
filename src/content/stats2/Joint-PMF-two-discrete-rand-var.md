@@ -1,7 +1,15 @@
 ---
-title: Join PMF of Two Discrete Variables
+marp: true
+math: mathjax
+title: Joint Probability Mass Function (PMF) of Two Discrete Random Variables
+week: 1
+subject: Statistics 2
+subjectcode: stats2
+date: 2024-06-10
 ---
-# Joint Probability Mass Function (PMF) of Two Discrete Random Variables
+
+
+
 
 In probability theory and statistics, the joint probability mass function (joint PMF) describes the probability of observing particular values for two or more discrete random variables simultaneously. It gives the probability of each combination of values that the random variables can take on.
 
@@ -34,7 +42,6 @@ $p_{X,Y}(x, y) = \frac{1}{36}$
 
 Because each outcome (pair of values) has an equal probability of $1/36$ (since each die has 6 sides and they are fair).
 
----
 The joint PMF table would look like this:
 $$
 
@@ -55,7 +62,7 @@ Each cell in the table represents the joint probability of getting the respectiv
 Understanding the joint PMF helps in analyzing the relationship between two random variables and making predictions based on their combined outcomes.
 
 ---
-### Example
+## Example
 
 Consider two biased coins, $X$ and $Y$, where $X$ has a probability $p = 0.7$ of landing heads and $Y$ has a probability $q = 0.7$ of landing heads. Let $X$ represent the outcome of the first coin flip (0 for tails, 1 for heads), and $Y$ represent the outcome of the second coin flip.
 
@@ -71,7 +78,7 @@ p_{X,Y}(x, y) =
 \end{cases}
 $$
 
----
+
 
 The joint PMF table would look like this:
 
@@ -99,7 +106,7 @@ A joint PMF, or joint probability mass function, is a function that assigns prob
 
 A joint PMF is typically represented as a table or a function that maps each combination of values of the random variables to their respective probabilities.
 
----
+
 ## How can I compute probabilities using a joint PMF?
 
 To compute probabilities using a joint PMF, you can sum the probabilities associated with all combinations of values that satisfy the condition of interest.
