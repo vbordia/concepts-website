@@ -13,8 +13,32 @@ const stats2collection = defineCollection({
     date: z.date()
   }),
 });
+const maths2collection = defineCollection({
+    type: 'content', // v2.5.0 and later
+    schema: z.object({
+      title: z.string(),
+      tags: z.array(z.string()).optional(),
+      subject: z.string(),
+      subjectcode: z.string(),
+      week: z.number(),
+      date: z.date()
+    }),
+  });
+  const eng2collection = defineCollection({
+    type: 'content', // v2.5.0 and later
+    schema: z.object({
+      title: z.string(),
+      tags: z.array(z.string()).optional(),
+      subject: z.string(),
+      subjectcode: z.string(),
+      week: z.number(),
+      date: z.date()
+    }),
+  });
 
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
   'stats2': stats2collection,
+  'maths2': maths2collection,
+  'eng2': eng2collection,
 };

@@ -1,15 +1,16 @@
 ---
+import '@fontsource/poppins';
 
 ---
 <nav class="navbar">
     <div class="navbar-logo">
-        
+        CONCEPTS
     </div>
     <ul class="navbar-menu">
         <li><a href="/">Home</a></li>
         <li><a href="/maths2">Maths 2</a></li>
         <li><a href="/stats2">Statistics 2</a></li>
-        
+        <li><a href="/eng2">English 2</a></li>
     </ul>
 </nav>
 
@@ -23,13 +24,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: black;
     padding: 20px 20px;
     
 }
 
-.navbar-logo img {
-    height: 40px;
+.navbar-logo {
+    font-family: "Poppins", sans-serif;
+    font-display: swap;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: white;
 }
 
 .navbar-menu {
